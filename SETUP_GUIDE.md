@@ -22,10 +22,11 @@ claude --version   # verify installation
 
 Codex CLI is OpenAI's CLI tool — ARIS uses it to call GPT as a cross-model reviewer. See the [Codex CLI docs](https://developers.openai.com/codex) for installation.
 
-After installing, register Codex CLI as a Claude Code MCP server:
+After installing, authenticate Codex (one-time, opens a browser to log in to ChatGPT) and register it as a Claude Code MCP server:
 
 ```bash
 codex --version   # verify installation
+codex login       # one-time ChatGPT auth (skip if already logged in)
 claude mcp add codex -s user -- codex mcp-server
 ```
 
@@ -86,7 +87,7 @@ The script shows an install plan and asks for confirmation (type `y`). See [`ins
 
 ```
 .claude/skills/<skill>        ← one symlink per skill → ~/aris_repo/skills/<skill>
-.aris/installed-skills.txt    ← install manifest (tracks every entry ARIS installed)
+.aris/installed-skills.txt    ← install manifest (tracks every skill symlink ARIS created)
 .aris/tools                   ← → ~/aris_repo/tools/ (helper scripts)
 CLAUDE.md                     ← updates the ARIS config block
 ```
@@ -200,7 +201,7 @@ Receiving GPT's answer means cross-model communication is working.
 **2. Test skill recognition** — enter in Claude Code:
 
 ```
-/alphaxiv http://arxiv.org/abs/1706.03762
+/alphaxiv https://arxiv.org/abs/1706.03762
 ```
 
 A successful invocation means skills are installed. This skill will also auto-write the paper into Research Wiki — check `research-wiki/papers/`.
@@ -231,5 +232,5 @@ claude
 > /rebuttal "paper/ + reviews" — venue: ICML          # Workflow 4: parse reviews → draft rebuttal → follow-up
 > /resubmit-pipeline "paper/" — venue: NeurIPS        # Workflow 5: port to new venue (text-only, no new experiments)
 > /paper-talk "paper/" — venue: ICLR                  # Workflow 6: paper → Beamer + PPTX talk + speaker notes + assurance audits
-> /research-pipeline "your research direction"       # Full pipeline: Workflow 1 → 1.5 → 2 → 3 end-to-end
+> /research-pipeline "your research direction"       # Full pipeline: W1 → 1.5 → 2 → handoff; default stops at NARRATIVE_REPORT.md. Add `— auto_write: true, venue: ICLR` to chain W3 paper writing too
 ```
