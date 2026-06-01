@@ -558,7 +558,10 @@ ARIS chains **77 composable skills** across the whole research lifecycle — lit
 
 ## 5. 📈 Score Progression (Real Run)
 
-A real overnight 4-round run on an ML research project, from borderline reject to submission-ready:
+A real overnight 4-round run on an ML research project: **5.0/10 (borderline reject) → 7.5/10 (submission-ready)** — the loop autonomously ran **20+ GPU experiments**, rewrote the narrative framing, and killed claims that didn't hold up, all without human intervention.
+
+<details>
+<summary>Round-by-round breakdown</summary>
 
 | Round | Score | What Happened |
 |-------|-------|---------------|
@@ -568,19 +571,24 @@ A real overnight 4-round run on an ML research project, from borderline reject t
 | Round 3 | 7.0/10 | Large seed study killed main improvement claim |
 | Round 4 | **7.5/10** ✅ | Diagnostic evidence solidified, **submission ready** |
 
-The loop autonomously ran **20+ GPU experiments**, rewrote the paper's narrative framing, and killed claims that didn't hold up — all without human intervention.
+</details>
 
 <a id="community-showcase"></a>
 
 ## 6. 🏆 Community Showcase — Papers Built with ARIS
 
-Real projects where the ARIS pipeline was used end-to-end to produce submitted manuscripts. **This section does not claim official acceptance unless a row explicitly says so:** ratings and quoted verdicts are AI/third-party review signals from tools such as [CSPaper](https://cspaper.org/) and [Stanford Agentic Reviewer](https://paperreview.ai/), not venue decisions. One important caveat: ARIS is designed to optimize through AI-review loops, so elevated AI-review scores are a normal consequence of the workflow rather than independent proof of acceptance. Human reviewers can still bring updated literature knowledge, community context, venue-specific taste, and objections that an AI reviewer did not model. **If you've used ARIS to complete a paper, we'd love to feature it here — open an issue or PR!**
+Real projects that used the full ARIS pipeline end-to-end. **The signals below are AI-review scores ([CSPaper](https://cspaper.org/) / [Stanford Agentic Reviewer](https://paperreview.ai/)), not venue acceptances** — and since ARIS optimizes *through* AI-review loops, high AI scores are an expected byproduct, not proof of acceptance (human reviewers still bring literature / venue / community judgment an AI reviewer misses). **Used ARIS for a paper? Open an issue / PR to be featured!**
+
+<details>
+<summary>Papers + their AI-review signals (3)</summary>
 
 | Paper | AI-review signal | Submission status | Built by | Notes |
 |-------|:----------------:|-------------------|----------|-------|
 | **CS Paper Submission** | [CSPaper](https://cspaper.org/) **8/10** — AI reviewer recommendation: "Top 50% of accepted papers, clear accept" | Submitted to a CS conference; awaiting official feedback | [@DefanXue](https://github.com/DefanXue) & [@Monglitay](https://github.com/Monglitay) | Full ARIS pipeline: idea → experiments → auto-review → paper writing. The quote is from CSPaper's simulated review, not an official venue review. |
 | **AAAI 2026 Paper Submission** | [Stanford Agentic Reviewer](https://paperreview.ai/) **7/10** — AI reviewer recommendation: "Good paper, accept" | Submitted to AAAI 2026 Main Technical; awaiting official decision | [@xinbo820-web](https://github.com/xinbo820-web) | Pure **Codex CLI** (ARIS-Codex skills). The 7/10 signal comes from an AAAI-style Stanford Agentic Reviewer run, not an official AAAI acceptance result. |
 | [UAV-CC](community_papers/UAV-CC.pdf) | Under review | Submitted to IEEE TGRS | [@wxx827](https://github.com/wxx827) | UAV change captioning benchmark. Claude Opus 4.6 (executor) + Codex GPT-5.5 xhigh (reviewer) + Cursor Opus 4.6 (assist). [PDF →](community_papers/UAV-CC.pdf) |
+
+</details>
 
 <details><summary>Reviewer screenshots</summary>
 <br>

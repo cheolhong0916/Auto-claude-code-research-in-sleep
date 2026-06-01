@@ -510,7 +510,10 @@ ARIS 用 **77 个可组合 skill** 覆盖科研全生命周期——文献查新
 
 ## 5. 📈 真实运行效果
 
-某 ML 研究项目上的 4 轮自动循环，从 borderline reject 到可投稿：
+某 ML 研究项目上的 4 轮通宵自动循环：**5.0/10（borderline reject）→ 7.5/10（可投稿）** —— 自主跑了 **20+ 个 GPU 实验**、重写叙事框架、杀掉经不住检验的声明，全程无人干预。
+
+<details>
+<summary>逐轮明细</summary>
 
 | 轮次 | 分数 | 发生了什么 |
 |------|------|-----------|
@@ -520,19 +523,24 @@ ARIS 用 **77 个可组合 skill** 覆盖科研全生命周期——文献查新
 | 第 3 轮 | 7.0/10 | 大规模 seed 研究推翻了主要改善声明 |
 | 第 4 轮 | **7.5/10** ✅ | 诊断证据确立，**可以投稿** |
 
-循环自主跑了 **20+ 个 GPU 实验**，重写了论文叙事框架，杀掉了经不住检验的声明——全程无人干预。
+</details>
 
 <a id="community-showcase"></a>
 
 ## 6. 🏆 社区实操 — 用 ARIS 完成的论文
 
-ARIS 全流程完成并进入投稿/审稿阶段的真实项目。**这里不宣称官方中稿，除非某一行明确写明已接收**：表中的分数和评价来自 [CSPaper](https://cspaper.org/)、[Stanford Agentic Reviewer](https://paperreview.ai/) 等 AI/第三方审稿模拟系统，不等同于会议或期刊的正式审稿意见。一个重要 caveat：ARIS 的核心机制就是让论文在 AI reviewer 反馈下反复迭代，所以 AI 审稿分数偏高是工作流的正常结果，而不是独立的录用证据；真实人类审稿者仍可能带来更新的文献视角、社区判断、venue taste 和 AI 系统没有建模到的问题。**如果你也用 ARIS 完成了论文，欢迎提 Issue 或 PR 告诉我们！**
+ARIS 全流程完成并进入投稿/审稿阶段的真实项目。**下面的分数是 AI 审稿信号（[CSPaper](https://cspaper.org/) / [Stanford Agentic Reviewer](https://paperreview.ai/)），不等于正式录用** —— 而且 ARIS 本就靠 AI-review 循环迭代，AI 分偏高是正常副产物、不是录用证据（真实人类审稿仍会带来 AI 没建模到的文献 / venue / 社区判断）。**你也用 ARIS 完成了论文？提 Issue / PR 来上榜！**
+
+<details>
+<summary>论文 + AI 审稿信号（3 篇）</summary>
 
 | 论文 | AI 审稿信号 | 投稿状态 | 作者 | 备注 |
 |------|:------------:|----------|------|------|
 | **CS 论文投稿** | [CSPaper](https://cspaper.org/) **8/10** — AI 审稿建议："Top 50% of accepted papers, clear accept" | 已投 CS 会议，等待正式审稿反馈 | [@DefanXue](https://github.com/DefanXue) & [@Monglitay](https://github.com/Monglitay) | ARIS 全流程：idea → 实验 → auto-review → 论文写作。该评价来自 CSPaper 模拟审稿，不是会议官方审稿意见。 |
 | **AAAI 2026 论文投稿** | [Stanford Agentic Reviewer](https://paperreview.ai/) **7/10** — AI 审稿建议："Good paper, accept" | 已投 AAAI 2026 Main Technical，等待官方结果 | [@xinbo820-web](https://github.com/xinbo820-web) | 纯 **Codex CLI**（ARIS-Codex skills）。7/10 来自 Stanford Agentic Reviewer 的 AAAI-style 模拟审稿，不代表 AAAI 官方审稿/录用结果。 |
 | [UAV-CC](community_papers/UAV-CC.pdf) | 审稿中 | 已投 IEEE TGRS | [@wxx827](https://github.com/wxx827) | 无人机变化描述基准。Claude Opus 4.6（执行）+ Codex GPT-5.5 xhigh（审阅）+ Cursor Opus 4.6（辅助）。[PDF →](community_papers/UAV-CC.pdf) |
+
+</details>
 
 <details><summary>审稿截图</summary>
 <br>
